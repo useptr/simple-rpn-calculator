@@ -1,0 +1,52 @@
+add_library(
+  token
+  token.h
+  token.cc
+)
+
+add_library(
+  tokenizer
+  tokenizer.h
+  tokenizer.cc
+)
+target_link_libraries(
+    tokenizer
+    token
+)
+
+add_library(
+  validator
+  validator.h
+  validator.cc
+)
+target_link_libraries(
+  validator
+  token
+)
+
+add_library(
+  operator_factory
+  operator_factory.h
+  operator_factory.cc
+)
+target_link_libraries(
+    operator_factory
+    token
+)
+add_library(
+  calculator
+  calculator.h
+  calculator.cc
+)
+target_link_libraries(
+    calculator
+    operator_factory
+    validator
+    tokenizer
+    token
+)
+add_library(
+  credit_calculator
+  credit_calculator.h
+  credit_calculator.cc
+)
