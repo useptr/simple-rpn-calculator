@@ -7,9 +7,6 @@ RPN (reverse polish notation) Calculator in C++20
 This project is a C++ implementation of a Reverse Polish Notation (RPN) calculator. The calculator reads arithmetic expressions, converts them from infix notation to postfix notation (RPN), and evaluates the result.
 
 ![calculator app](/misc/images/example.png)
-## Information
-
-Note that you should use *Dijkstra's algorithm* to translate expressions into *reverse Polish notation* to implement the calculator. You can find all the necessary information in the SmartCalc v1.0 project description to refresh your knowledge.
 
 ## Supported operators
    - **Arithmetic operators**:
