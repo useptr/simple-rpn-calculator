@@ -7,6 +7,7 @@ const std::unordered_map<Token::Type, UnaryOperator>
     OperatorFactory::kUnaryOperators = {
         {Token::Type::kUnaryMinus, std::negate<double>()},
         {Token::Type::kUnaryPlus, [](double x) { return x; }},
+// TODO {Token::Type::kCos, static_cast<decltype(&std::cos)>(&std::cos)},
         {Token::Type::kCos, static_cast<double (*)(double)>(&std::cos)},
         {Token::Type::kSin, static_cast<double (*)(double)>(&std::sin)},
         {Token::Type::kTan, static_cast<double (*)(double)>(&std::tan)},
